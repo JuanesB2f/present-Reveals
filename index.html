@@ -1,40 +1,501 @@
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<html lang="es">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<title>Presentación de Patrones de Diseño</title>
+	<meta name="description" content="Presentación sobre patrones de diseño comunes">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<meta name="author" content="Tu Nombre">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<div class="slides">
+
+			<section>
+				<a href="https://revealjs.com">
+					<img src="img/itdo-patrones-de-diseno-el-builder-constructor-1.jpg" alt=" logo"
+						style="height: 200px; margin: 100 auto 4rem auto; background: transparent;" class="demo-logo">
+				</a>
+				<h3>JUAN ESTEBAN FONSECA AVILA</h3>
+				<h2><span style="display: inline-block;" class="fragment fade-right">PATRONES&nbsp;|</span>
+					<span style="display: inline-block;" class="fragment fade-right">DE&nbsp;|</span>
+					<span style="display: inline-block;" class="fragment fade-right">DISEÑO&nbsp;|</span>
+					<span style="display: inline-block;" class="fragment fade-right">DE&nbsp;</span>
+					<span style="display: inline-block;" class="fragment fade-right">SOFTWARE&nbsp;</span>
+				</h2>
+
+				<p>
+					<small>Created by <a href="https://github.com/JuanesB2f">Juan Esteban Fonseca</a> and <a
+							href="https://github.com/hakimel/reveal.js/graphs/contributors">contributors</a></small>
+				</p>
+			</section>
+			<section>
+				<h2>Presentación de Patrones de Diseño</h2>
+				<p>Bienvenidos a la presentación sobre patrones de diseño comunes en programación.</p>
+			</section>
+			<section>
+				<h2>Patrones de Creación</h2>
+				<ul>
+					<li>Singleton</li>
+					<li>Factory Method</li>
+					<li>Abstract Factory</li>
+					<li>Builder</li>
+					<li>Prototype</li>
+					<li>Object Pool</li>
+					<li>Lazy Initialization</li>
+				</ul>
+			</section>
+			<section>
+				<section data-background="#31384D ">
+					<h2>Patrones Estructurales</h2>
+					<ul>
+						<li>Adapter</li>
+						<li>Bridge</li>
+						<li>Composite</li>
+						<li>Decorator</li>
+						<li>Facade</li>
+						<li>Flyweight</li>
+						<li>Proxy</li>
+					</ul>
+				
+			</section>
+
+			<section>
+				<h2>Patrones de Comportamiento</h2>
+				<ul>
+					<li>Command </li>
+					<li>Interpreter</li>
+					<li>Iterator</li>
+					<li>Mediator</li>
+					<li>Memento</li>
+					<li>Observer</li>
+					<li>State</li>
+					<li>Strategy</li>
+
+				</ul>
+			</section>
+			<section>
+				<h2>
+					Patrones Creacionales
+				</h2>
+			</section>
+
+			<section>
+				<section data-background="#31384D ">
+					<h2>Abstract Factory</h2>
+					<p>
+						En este patrón, una interfaz crea conjuntos o familias de objetos relacionados sin especificar
+						el nombre de la clase. Busca agrupar un conjunto de clases que tiene un funcionamiento en común
+						llamadas familias, las cuales son creadas mediante un Factory.
+					</p>
+					<a href="#" class="navigate-down">
+
+					</a>
+				</section>
+			</section>
+
+			
+			<section>
+
+				<h2>Prototype</h2>
+				<p>
+					El patrón Prototype permite la creación de nuevos objetos clonando un objeto existente, conocido
+					como prototipo. Esto puede ser útil cuando la creación de un objeto es más costosa en recursos
+					que la clonación de uno existente. También se puede utilizar para configurar objetos con
+					diferentes propiedades.
+				</p>
+				<a href="#" class="navigate-down">
+
+				</a>
+			</section>
+			</section>
+
+			<section>
+				<section data-background="#31384D">
+					<h2>Singleton</h2>
+					<p>
+						El patrón Singleton asegura que una clase tenga una única instancia y proporciona un punto de
+						acceso global a esa instancia. Esto es útil cuando se necesita controlar estrictamente el acceso
+						a una única instancia de una clase, como un objeto de configuración o un gestor de recursos
+						compartidos.
+					</p>
+					<a href="#" class="navigate-down">
+
+					</a>
+				</section>
+			</section>
+
+			
+			<section>
+				<h2>Builder</h2>
+				<p>
+					El patrón Builder separa la construcción de un objeto complejo de su representación, permitiendo
+					la creación de objetos con diferentes configuraciones. Esto facilita la creación de objetos
+					compuestos con múltiples partes y opciones de configuración.
+				</p>
+				<a href="#" class="navigate-down">
+
+				</a>
+			</section>
+			</section>
+
+			<section>
+				<section data-background="#31384D">
+					<h2>Patrón Método de Fábrica (Factory Method)</h2>
+					<p>El patrón Método de Fábrica define una interfaz para crear un objeto pero permite que las
+						subclases
+						cambien el tipo de objetos que se crearán.</p>
+					<pre><code class="hljs java">
+			
+interface Producto {
+    void crear();
+}
+
+class ProductoConcretoA implements Producto {
+    public void crear() {
+        System.out.println("Creando Producto A");
+    }
+}
+
+class ProductoConcretoB implements Producto {
+    public void crear() {
+        System.out.println("Creando Producto B");
+    }
+}
+
+abstract class Creador {
+    public abstract Producto metodoDeFabrica();
+}
+
+class CreadorConcretoA extends Creador {
+    public Producto metodoDeFabrica() {
+        return new ProductoConcretoA();
+    }
+}	
+
+class CreadorConcretoB extends Creador {
+    public Producto metodoDeFabrica() {
+        return new ProductoConcretoB();
+    }
+}</code></pre>
+				</section>
+			</section>
+
+			
+			<section>
+
+				<h2>Object Pool</h2>
+				<p>
+					El patrón Object Pool es útil cuando se necesita administrar un conjunto de objetos que son costosos
+					de crear y destruir repetidamente. En lugar de crear nuevos objetos cada vez que se necesitan, se
+					mantiene un "pool" de objetos preinicializados disponibles para su reutilización. Esto mejora la
+					eficiencia al reducir la sobrecarga de creación y destrucción de objetos.
+				</p>
+				<a href="#" class="navigate-down">
+
+				</a>
+			
+			</section>
+
+		
+			<section>
+				<section data-background="#31384D">
+					<h2>Lazy Initialization</h2>
+					<p>
+						El patrón Lazy Initialization consiste en retrasar la creación de un objeto o el cálculo de un
+						valor hasta que realmente sea necesario. Esto puede ser beneficioso para mejorar el rendimiento
+						y ahorrar recursos, especialmente cuando se trabaja con objetos costosos de crear o cuando se
+						necesita inicializar un objeto solo cuando se accede a él por primera vez.
+					</p>
+					<a href="#" class="navigate-down">
+
+					</a>
+				</section>
+			</section>
+
+			<section>
+				<h2>
+					Patrones Estructurales
+				</h2>
+			</section>
+
+			<!-- Continúa con el patrón Adapter -->
+			<section>
+
+				<h2>Adapter</h2>
+				<p>
+					El patrón Adapter permite que dos interfaces incompatibles trabajen juntas mediante un adaptador
+					que actúa como intermediario, convirtiendo una interfaz en otra. Es útil cuando se necesita que
+					clases existentes colaboren sin modificar su código fuente original.
+				</p>
+				<a href="#" class="navigate-down">
+
+				</a>
+		
+			</section>
+
+			<!-- Continúa con el patrón Bridge -->
+			<section>
+				<section data-background="#31384D">
+					<h2>Bridge</h2>
+					<p>
+						El patrón Bridge separa una abstracción de su implementación, lo que permite que ambas varíen de
+						forma independiente. Es útil para desacoplar una interfaz de su implementación y facilitar la
+						extensibilidad y la adaptación a cambios en los requisitos.
+					</p>
+					<a href="#" class="navigate-down">
+
+					</a>
+				</section>
+			</section>
+
+		
+			<section>
+
+				<h2>Composite</h2>
+				<p>
+					El patrón Composite permite componer objetos en estructuras de árbol para representar jerarquías
+					parte-todo. Es útil para tratar objetos individuales y composiciones de objetos de manera
+					uniforme, lo que simplifica la gestión de estructuras complejas.
+				</p>
+				<a href="#" class="navigate-down">
+
+				</a>
+			
+			</section>
+
+			
+			<section>
+				<section data-background="#31384D">
+					<h2>Decorator</h2>
+					<p>
+						El patrón Decorator agrega funcionalidad a un objeto existente de manera dinámica sin alterar su
+						estructura básica. Es útil para agregar características a objetos de manera flexible y
+						extensible sin necesidad de crear subclases.
+					</p>
+					<a href="#" class="navigate-down">
+
+					</a>
+				</section>
+			</section>
+
+			<section>
+
+				<h2>Facade</h2>
+				<p>
+					El patrón Facade proporciona una interfaz unificada para un conjunto de interfaces en un
+					subsistema, simplificando su uso y ocultando su complejidad. Es útil para reducir la complejidad
+					de sistemas grandes y mejorar la legibilidad del código.
+				</p>
+				<a href="#" class="navigate-down">
+
+				</a>
+			
+			</section>
+
+	
+			<section>
+				<section data-background="#31384D">
+					<h2>Flyweight</h2>
+					<p>
+						El patrón Flyweight minimiza el uso de la memoria o el almacenamiento compartiendo lo máximo
+						posible entre objetos similares. Es útil cuando se trabaja con un gran número de objetos que
+						comparten datos similares para ahorrar recursos.
+					</p>
+					<a href="#" class="navigate-down">
+
+					</a>
+				</section>
+			</section>
+
+			<section>
+
+				<h2>Proxy</h2>
+				<p>
+					El patrón Proxy proporciona un sustituto o marcador de posición para controlar el acceso a un
+					objeto, permitiendo un control adicional, como la carga perezosa. Es útil para controlar el
+					acceso a objetos costosos de crear o inicializar y para implementar lógica adicional de control
+					de acceso.
+				</p>
+				<a href="#" class="navigate-down">
+
+				</a>
+			
+			</section>
+
+			<section>
+				<section data-background="#31384D">
+					Patrones de Comportamiento
+					</h2>
+				</section>
+
+
+	
+				<section>
+
+					<h2>Chain of Responsibility</h2>
+					<p>
+						El patrón Chain of Responsibility permite que varios objetos manejen una solicitud de manera
+						secuencial hasta que uno de ellos la procese. Es útil para pasar solicitudes a través de una
+						cadena de manipuladores, donde cada manipulador decide si puede manejar la solicitud o si debe
+						pasarla al siguiente en la cadena.
+					</p>
+					<a href="#" class="navigate-down">
+
+					</a>
+			
+			</section>
+
+	
+			<section>
+				<section data-background="#31384D">
+					<h2>Command</h2>
+					<p>
+						El patrón Command encapsula una solicitud como un objeto, lo que permite parametrizar clientes
+						con operaciones y gestionar su ejecución, cola o registro. Es útil para desacoplar a los
+						emisores de las solicitudes de sus receptores, lo que facilita la extensibilidad y el registro
+						de acciones.
+					</p>
+					<a href="#" class="navigate-down">
+
+					</a>
+				</section>
+			</section>
+
+	
+			<section>
+
+				<h2>Interpreter</h2>
+				<p>
+					El patrón Interpreter define una gramática para un lenguaje y proporciona un intérprete para
+					interpretar expresiones en ese lenguaje. Es útil cuando se necesita implementar un lenguaje
+					personalizado o procesar expresiones complejas de manera estructurada.
+				</p>
+				<a href="#" class="navigate-down">
+
+				</a>
+			
+			</section>
+
+			<section>
+				<section data-background="#31384D">
+					<h2>Iterator</h2>
+					<p>
+						El patrón Iterator proporciona una forma de acceder secuencialmente a elementos de una colección
+						sin exponer su representación subyacente. Es útil para recorrer colecciones de objetos sin
+						preocuparse por su estructura interna, lo que aumenta la flexibilidad y la reutilización del
+						código.
+					</p>
+					<a href="#" class="navigate-down">
+
+					</a>
+				</section>
+			</section>
+
+	
+			<section>
+
+				<h2>Mediator</h2>
+				<p>
+					El patrón Mediator define un objeto que coordina las interacciones entre objetos, promoviendo el
+					bajo acoplamiento entre ellos. Es útil cuando se tiene un conjunto de objetos que necesitan
+					comunicarse entre sí, evitando dependencias directas y simplificando el mantenimiento.
+				</p>
+				<a href="#" class="navigate-down">
+
+				</a>
+			
+			</section>
+
+			<section>
+				<section data-background="#31384D">
+					<h2>Memento</h2>
+					<p>
+						El patrón Memento captura y externaliza el estado interno de un objeto, permitiendo su
+						restauración posterior. Es útil cuando se necesita mantener un historial de cambios o permitir
+						deshacer operaciones en un objeto sin exponer su estructura interna.
+					</p>
+					<a href="#" class="navigate-down">
+
+					</a>
+				</section>
+			</section>
+
+		
+			<section>
+
+				<h2>Observer</h2>
+				<p>
+					El patrón Observer define una dependencia uno-a-muchos entre objetos para que cuando uno cambie de
+					estado, todos sus dependientes sean notificados y actualizados automáticamente. Es útil para
+					implementar la propagación de cambios en tiempo real y la sincronización de objetos relacionados.
+				</p>
+				<a href="#" class="navigate-down">
+
+				</a>
+			
+			</section>
+
+	
+			<section>
+				<section data-background="#31384D">
+					<h2>State</h2>
+					<p>
+						El patrón State permite que un objeto cambie su comportamiento cuando su estado interno cambia.
+						El objeto parecerá haber cambiado su clase. Es útil cuando un objeto debe cambiar su
+						comportamiento en función de su estado, lo que evita la creación de múltiples clases derivadas
+						para cada estado.
+					</p>
+					<a href="#" class="navigate-down">
+
+					</a>
+				</section>
+			</section>
+
+			<section>
+
+				<h2>Strategy</h2>
+				<p>
+					El patrón Strategy define una familia de algoritmos, los encapsula y los hace intercambiables.
+					Permite que el algoritmo varíe independientemente de los clientes que lo utilizan. Es útil cuando se
+					necesita elegir entre diferentes algoritmos en tiempo de ejecución o cuando se quiere desacoplar el
+					comportamiento específico del contexto.
+				</p>
+				<a href="#" class="navigate-down">
+
+				</a>
+			
+			</section>
+
 		</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	</div>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/zoom/zoom.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/search/search.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+			plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+		});
+	</script>
+</body>
+
 </html>
